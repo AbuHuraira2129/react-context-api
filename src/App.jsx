@@ -1,11 +1,18 @@
-import React from 'react'
+import { useState, useContext } from "react";
+import "./App.css";
+import Item from "./components/Item";
+import Cart from "./components/Cart";
 
-const App = () => {
+function App() {
   return (
-    <div className='App'>
-      <h1>Context API</h1>
-    </div>
-  )
+    <>
+      <h1>Items</h1>
+      <Item name="MacBook Pro" price={100000} />
+      <Item name="Pendrive" price={4000} />
+      <Item name="Mobile" price={35000} />
+      <Cart />
+    </>
+  );
 }
 
-export default App
+export default App;
